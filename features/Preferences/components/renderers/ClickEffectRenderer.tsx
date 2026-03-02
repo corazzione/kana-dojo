@@ -45,7 +45,7 @@ export default function ClickEffectRenderer() {
     const emoji = effectDef.emoji;
 
     // Pre-warm bitmap cache
-    getEmojiBitmap(emoji, 22);
+    getEmojiBitmap(emoji, 48);
 
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const resize = () => {
@@ -62,7 +62,7 @@ export default function ClickEffectRenderer() {
     const BURST_COUNT = 7;
 
     const spawnAt = (x: number, y: number) => {
-      const bmp = getEmojiBitmap(emoji, 22);
+      const bmp = getEmojiBitmap(emoji, 48);
       if (!bmp) return;
       for (let i = 0; i < BURST_COUNT; i++) {
         const angle = (i / BURST_COUNT) * Math.PI * 2 + Math.random() * 0.35;
@@ -74,7 +74,7 @@ export default function ClickEffectRenderer() {
           vy: Math.sin(angle) * speed,
           life: 1,
           decay: 0.007 + Math.random() * 0.003,
-          size: Math.random() * 6 + 20,
+          size: Math.random() * 10 + 40,
           rotation: Math.random() * Math.PI * 2,
           rotationSpeed: (Math.random() - 0.5) * 0.08,
           bitmap: bmp,

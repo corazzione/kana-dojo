@@ -48,7 +48,7 @@ export default function CursorTrailRenderer() {
     const emoji = effectDef.emoji;
 
     // Pre-warm bitmap cache
-    getEmojiBitmap(emoji, 20);
+    getEmojiBitmap(emoji, 40);
 
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const resize = () => {
@@ -70,7 +70,7 @@ export default function CursorTrailRenderer() {
       if (now - lastSpawn.current < SPAWN_THROTTLE_MS) return;
       lastSpawn.current = now;
 
-      const bmp = getEmojiBitmap(emoji, 18);
+      const bmp = getEmojiBitmap(emoji, 40);
       if (!bmp) return;
 
       if (particles.current.length >= MAX_PARTICLES) {
@@ -82,7 +82,7 @@ export default function CursorTrailRenderer() {
         p.vy = Math.random() * 0.15 + 0.04;
         p.life = 1;
         p.decay = 0.008 + Math.random() * 0.003;
-        p.size = 24;
+        p.size = 40;
         p.rotation = (Math.random() - 0.5) * 0.25;
         p.rotationSpeed = (Math.random() - 0.5) * 0.02;
         p.bitmap = bmp;
@@ -95,7 +95,7 @@ export default function CursorTrailRenderer() {
           vy: Math.random() * 0.15 + 0.04,
           life: 1,
           decay: 0.008 + Math.random() * 0.003, // ~100-125 frame lifespan
-          size: 24,
+          size: 40,
           rotation: (Math.random() - 0.5) * 0.25,
           rotationSpeed: (Math.random() - 0.5) * 0.02,
           bitmap: bmp,
