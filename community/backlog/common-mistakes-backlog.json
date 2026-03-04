@@ -613,14 +613,14 @@
     "explanation": "Use ように for purpose/prevention. (Pattern set 4)",
     "id": 77,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "駅まで十分歩きますかかる。",
     "correct": "駅まで歩いて十分かかる。",
     "explanation": "Use natural collocation and order. (Pattern set 4)",
     "id": 78,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
