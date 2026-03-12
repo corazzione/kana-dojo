@@ -828,7 +828,7 @@
     "region": "Kansai",
     "note": "Now used nationwide. (Set 5)",
     "id": 83,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
